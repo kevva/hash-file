@@ -8,18 +8,15 @@ Install with [npm](https://npmjs.org/package/hash-file): `npm install hash-file`
 
 ## Examples
 
-If you're fetching an archive you can set `extract: true` in options and
-it'll extract it for you.
-
 ```js
-var hashfile = require('hashfile');
+var hashfile = require('hash-file');
 
 hashfile('test.zip');
 ```
 
 ## API
 
-### download(src)
+### hashfile(src)
 
 Create a hashed file name from a files content.
 
