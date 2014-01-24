@@ -3,7 +3,7 @@
 
 var assert = require('assert');
 var fs = require('fs');
-var hashfile = require('../hashfile');
+var hashfile = require('../');
 var path = require('path');
 
 describe('hashfile()', function () {

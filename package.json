@@ -19,9 +19,9 @@
   "scripts": {
     "test": "mocha --reporter list"
   },
-  "main": "hashfile.js",
+  "main": "index.js",
   "files": [
-    "hashfile.js"
+    "index.js"
   ],
   "devDependencies": {
     "mocha": "~1.17.0"
