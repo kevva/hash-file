@@ -11,7 +11,8 @@ Install with [npm](https://npmjs.org/package/hash-file): `npm install hash-file`
 ```js
 var hashfile = require('hash-file');
 
-hashfile('test.zip');
+hashfile('test.jpg');
+// => ac8b2c4b75b2d36988c62b919a857f1baacfcd4c
 ```
 
 ## API
