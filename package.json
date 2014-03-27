@@ -24,7 +24,7 @@
     "index.js"
   ],
   "devDependencies": {
-    "mocha": "~1.17.0"
+    "mocha": "^1.18.2"
   },
   "engines": {
     "node": ">=0.10.0"
