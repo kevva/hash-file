@@ -2,31 +2,28 @@
   "name": "hash-file",
   "version": "0.1.0",
   "description": "Create a hashed file name",
+  "license": "MIT",
+  "repository": "kevva/hash-file",
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "https://github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter list"
+  },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "file",
     "hash",
     "name"
   ],
-  "homepage": "https://github.com/kevva/hash-file",
-  "bugs": "https://github.com/kevva/hash-file/issues",
-  "author": {
-    "name": "Kevin Martensson",
-    "email": "kevinmartensson@gmail.com",
-    "url": "http://kevinmartensson.com"
-  },
-  "license": "MIT",
-  "repository": "git://github.com/kevva/hash-file.git",
-  "scripts": {
-    "test": "mocha --reporter list"
-  },
-  "main": "index.js",
-  "files": [
-    "index.js"
-  ],
   "devDependencies": {
     "mocha": "^1.18.2"
-  },
-  "engines": {
-    "node": ">=0.10.0"
   }
 }
