@@ -1,4 +1,4 @@
-# hash-file [![Build Status](https://secure.travis-ci.org/kevva/hash-file.png?branch=master)](http://travis-ci.org/kevva/hash-file)
+# hash-file [![Build Status](https://travis-ci.org/kevva/hash-file.svg?branch=master)](https://travis-ci.org/kevva/hash-file)
 
 > Create a hashed file name with Node.js.
 
