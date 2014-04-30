@@ -1,6 +1,6 @@
 # hash-file [![Build Status](https://travis-ci.org/kevva/hash-file.svg?branch=master)](https://travis-ci.org/kevva/hash-file)
 
-> Create a hashed file name with Node.js.
+> Create a hashed file name with Node.js
 
 ## Install
 
@@ -19,4 +19,4 @@ hashfile('test.jpg');
 
 ## License
 
-[MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Kevin Mårtensson](http://kevinmartensson.com)
+MIT © [Kevin Mårtensson](http://kevinmartensson.com)
