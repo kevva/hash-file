@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha --reporter list"
+    "test": "node test/test.js"
   },
   "files": [
     "index.js"
@@ -24,6 +24,6 @@
     "name"
   ],
   "devDependencies": {
-    "mocha": "^1.18.2"
+    "ava": "^0.0.4"
   }
 }
