@@ -1,4 +1,4 @@
-# hash-file [![Build Status](http://img.shields.io/travis/kevva/hash-file.svg?style=flat)](https://travis-ci.org/kevva/hash-file)
+# hash-file [![Build Status](https://travis-ci.org/kevva/hash-file.svg?branch=master)](https://travis-ci.org/kevva/hash-file)
 
 > Create a hashed file name
 
