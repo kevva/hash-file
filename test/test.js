@@ -10,7 +10,7 @@ test('return a hashed file name from a string', function (t) {
 
 	hashFile(src, function (err, hash) {
 		t.assert(!err, err);
-		t.assert(hash === 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c');
+		t.assert(hash === 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c', hash);
 	});
 });
 
@@ -19,18 +19,22 @@ test('return a hashed file name from a Buffer', function (t) {
 
 	hashFile(src, function (err, hash) {
 		t.assert(!err, err);
-		t.assert(hash === 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c');
+		t.assert(hash === 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c', hash);
 	});
 });
 
 test('synchronously return a hashed file name from a string', function (t) {
 	var src = path.join(__dirname, 'fixtures/test.jpg');
-	t.assert(hashFile.sync(src) === 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c');
+	var hash = hashFile.sync(src);
+
+	t.assert(hash === 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c', hash);
 	t.end();
 });
 
 test('synchronously return a hashed file name from a Buffer', function (t) {
 	var src = new Buffer(fs.readFileSync(path.join(__dirname, 'fixtures/test.jpg')));
-	t.assert(hashFile.sync(src) === 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c');
+	var hash = hashFile.sync(src);
+
+	t.assert(hash === 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c', hash);
 	t.end();
 });
