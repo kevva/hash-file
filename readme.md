@@ -16,7 +16,7 @@ $ npm install --save hash-file
 var hashFile = require('hash-file');
 
 hashFile('test.jpg');
-//=> ac8b2c4b75b2d36988c62b919a857f1baacfcd4c
+//=> 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c'
 ```
 
 
