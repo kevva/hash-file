@@ -15,7 +15,12 @@ $ npm install --save hash-file
 ```js
 var hashFile = require('hash-file');
 
-hashFile('test.jpg');
+hashFile('test.jpg', function (err, hash) {
+	console.log(hash);
+	//=> 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c'
+})
+
+hashFile.sync('test.jpg');
 //=> 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c'
 ```
 
