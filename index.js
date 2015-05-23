@@ -1,26 +1,15 @@
 'use strict';
-
-var crypto = require('crypto');
-var fs = require('fs');
+var hasha = require('hasha');
+var opts = {algorithm: 'sha1'};
 
 module.exports = function (src, cb) {
 	if (Buffer.isBuffer(src)) {
-		var data = src.toString('utf8');
-		cb(null, crypto.createHash('sha1').update(data).digest('hex'));
-		return;
+		setImmediate(cb, null, hasha(src, opts));
+	} else {
+		hasha.fromFile(src, opts, cb);
 	}
-
-	fs.readFile(String(src), 'utf8', function (err, data) {
-		if (err) {
-			cb(err);
-			return;
-		}
-
-		cb(null, crypto.createHash('sha1').update(data).digest('hex'));
-	});
 };
 
 module.exports.sync = function (src) {
-	var data = Buffer.isBuffer(src) ? src.toString('utf8') : fs.readFileSync(String(src), 'utf8');
-	return crypto.createHash('sha1').update(data).digest('hex');
+	return Buffer.isBuffer(src) ? hasha(src, opts) : hasha.fromFileSync(src, opts);
 };
