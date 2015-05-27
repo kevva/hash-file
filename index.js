@@ -5,9 +5,10 @@ var opts = {algorithm: 'sha1'};
 module.exports = function (src, cb) {
 	if (Buffer.isBuffer(src)) {
 		setImmediate(cb, null, hasha(src, opts));
-	} else {
-		hasha.fromFile(src, opts, cb);
+		return;
 	}
+
+	hasha.fromFile(src, opts, cb);
 };
 
 module.exports.sync = function (src) {
