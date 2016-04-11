@@ -13,7 +13,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "ava"
   },
   "files": [
     "index.js"
@@ -28,6 +28,6 @@
     "hasha": "^2.2.0"
   },
   "devDependencies": {
-    "ava": "^0.0.4"
+    "ava": "*"
   }
 }
