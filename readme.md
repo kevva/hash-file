@@ -13,9 +13,9 @@ $ npm install --save hash-file
 ## Usage
 
 ```js
-var hashFile = require('hash-file');
+const hashFile = require('hash-file');
 
-hashFile('test.jpg', function (err, hash) {
+hashFile('test.jpg').then(hash => {
 	console.log(hash);
 	//=> 'ac8b2c4b75b2d36988c62b919a857f1baacfcd4c'
 });

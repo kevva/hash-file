@@ -1,16 +1,13 @@
 'use strict';
-var hasha = require('hasha');
-var opts = {algorithm: 'sha1'};
+const hasha = require('hasha');
+const opts = {algorithm: 'sha1'};
 
-module.exports = function (src, cb) {
+module.exports = src => {
 	if (Buffer.isBuffer(src)) {
-		setImmediate(cb, null, hasha(src, opts));
-		return;
+		return Promise.resolve(hasha(src, opts));
 	}
 
-	hasha.fromFile(src, opts, cb);
+	return hasha.fromFile(src, opts);
 };
 
-module.exports.sync = function (src) {
-	return Buffer.isBuffer(src) ? hasha(src, opts) : hasha.fromFileSync(src, opts);
-};
+module.exports.sync = src => Buffer.isBuffer(src) ? hasha(src, opts) : hasha.fromFileSync(src, opts);
